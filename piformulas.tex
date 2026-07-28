@@ -1,0 +1,118 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{parskip}
+
+\setlength\parindent{0pt}
+
+\title{Estimating Pi}
+
+\author{Chris Webb}
+
+
+\begin{document}
+
+\maketitle
+
+
+\[\pi \approx 3.141592653589793238 \]
+
+
+\section{Fractions}
+
+Default vertical spacing :(
+
+\begin{align*}
+\pi &\approx \frac{22}{7} \\
+\pi &\approx \frac{333}{106} \\
+\pi &\approx \frac{355}{113} \\
+\pi &\approx \frac{52163}{16604} \\
+\pi &\approx \frac{103993}{33102} \\
+\pi &\approx \frac{245850922}{78256779}
+\end{align*}
+
+vertical spacing 1.0ex :)
+
+\begin{align*}
+\pi &\approx \frac{22}{7} \\[1.0ex]
+\pi &\approx \frac{333}{106} \\[1.0ex]
+\pi &\approx \frac{355}{113} \\[1.0ex]
+\pi &\approx \frac{52163}{16604} \\[1.0ex]
+\pi &\approx \frac{103993}{33102} \\[1.0ex]
+\pi &\approx \frac{245850922}{78256779}
+\end{align*}
+
+
+\section{Francois Viete}
+
+\[
+\frac{2}{\pi} = 
+\frac{\sqrt{2}}{2} \cdot 
+\frac{\sqrt{2+\sqrt{2}}}{2} \cdot
+\frac{\sqrt{2+\sqrt{2+\sqrt{2}}}}{2} 
+\cdots
+\]
+
+\[
+\pi = (1 \div \frac{2}{\pi}) \times 2
+\]
+
+\[
+\pi = \left( 1 \div \frac{2}{\pi} \right) \times 2
+\]
+
+
+\section{John Wallis}
+
+\[
+\frac{\pi}{2} = 
+\frac{2}{1} \cdot
+\frac{2}{3} \cdot
+\frac{4}{3} \cdot
+\frac{4}{5} \cdot
+\frac{6}{5} \cdot
+\frac{6}{7} \cdot
+\frac{8}{7} \cdot
+\frac{8}{9}
+\cdots
+\]
+
+
+\section{John Machin}
+
+\[
+\frac{\pi}{4} = 4 \arctan \frac{1}{5} - \arctan \frac{1}{239}
+\]
+
+
+\section{Gregory-Leibniz}
+
+\[
+\pi = 
+\frac{4}{1} -
+\frac{4}{3} +
+\frac{4}{5} -
+\frac{4}{7} +
+\frac{4}{9} -
+\frac{4}{11} +
+\frac{4}{13} -
+\cdots
+\]
+
+
+\section{Nilakantha}
+
+\[
+\pi = 3 +
+\frac{4}{2 \times 3 \times 4} -
+\frac{4}{4 \times 5 \times 6} +
+\frac{4}{6 \times 7 \times 8} -
+\frac{4}{8 \times 9 \times 10} +
+\cdots
+\]
+
+
+\end{document}
+
+
+
