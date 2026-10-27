@@ -1,0 +1,129 @@
+% compile with lualatex, not pdflatex etc.
+
+\documentclass{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{luacode}
+
+\directlua{require('piformulas.lua')}
+
+
+\title{Evaluating Pi Formulas with Lua}
+
+\author{Chris Webb, LaTeX Snippets}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Hard Coded Return Value}
+
+
+\[
+\pi \approx 
+\luaexec{tex.print(pi())}
+\]
+
+
+\section{Fraction}
+
+\[
+\frac{22}{7} \approx 
+\luaexec{tex.print(fraction())}
+\]
+
+
+\section{Francois Viete}
+
+\[
+\frac{2}{\pi} = 
+\frac{\sqrt{2}}{2} \cdot 
+\frac{\sqrt{2+\sqrt{2}}}{2} \cdot
+\frac{\sqrt{2+\sqrt{2+\sqrt{2}}}}{2} 
+\cdots
+\]
+
+\[
+\pi \approx 
+\luaexec{tex.print(viete(16))}
+\;\text{(16 terms)}
+\]
+
+
+\section{John Wallis}
+
+\[
+\frac{\pi}{2} = 
+\frac{2}{1} \cdot
+\frac{2}{3} \cdot
+\frac{4}{3} \cdot
+\frac{4}{5} \cdot
+\frac{6}{5} \cdot
+\frac{6}{7} \cdot
+\frac{8}{7} \cdot
+\frac{8}{9}
+\cdots
+\]
+
+\[
+\pi \approx 
+\luaexec{tex.print(wallis(100000))}
+\;\text{(100000 terms)}
+\]
+
+
+\section{John Machin}
+
+\[
+\frac{\pi}{4} = 4 \arctan \frac{1}{5} - \arctan \frac{1}{239}
+\]
+
+\[
+\pi \approx 
+\luaexec{tex.print(machin())}
+\]
+
+
+\section{Gregory-Leibniz}
+
+\[
+\pi = 
+\frac{4}{1} -
+\frac{4}{3} +
+\frac{4}{5} -
+\frac{4}{7} +
+\frac{4}{9} -
+\frac{4}{11} +
+\frac{4}{13} -
+\cdots
+\]
+
+\[
+\pi \approx 
+\luaexec{tex.print(gregoryleibniz(100000))}
+\;\text{(100000 terms)}
+\]
+
+
+\section{Nilakantha}
+
+\[
+\pi = 3 +
+\frac{4}{2 \times 3 \times 4} -
+\frac{4}{4 \times 5 \times 6} +
+\frac{4}{6 \times 7 \times 8} -
+\frac{4}{8 \times 9 \times 10} +
+\cdots
+\]
+
+\[
+\pi \approx 
+\luaexec{tex.print(nilakantha(100000))}
+\;\text{(100000 terms)}
+\]
+
+
+\end{document}
